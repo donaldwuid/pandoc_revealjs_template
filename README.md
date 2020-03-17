@@ -33,7 +33,17 @@ Your Date
 
 ## What is it
 
-It can convert this **Markdown**, into a **Presentation**!
+::: incremental
+
+- It converts **Markdown**...
+- into a **Presentation**!
+
+:::
+
+. . .
+
+Open README.html
+
 
 ## How it works
 
@@ -95,6 +105,14 @@ See the [Next topick Columns](#ColumnsIdentifier).
 
 As (@good) illustrates, ...
 
+## Inserting pauses
+
+content before the pause
+
+. . .
+
+content after the pause
+
 
 ## Incremental lists
 
@@ -120,14 +138,6 @@ or
 > - Item 1
 > - Item 2
 > - Item 3
-
-## Inserting pauses
-
-content before the pause
-
-. . .
-
-content after the pause
 
 
 ## Columns {#ColumnsIdentifier}
