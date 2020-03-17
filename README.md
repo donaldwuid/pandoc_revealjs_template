@@ -42,7 +42,7 @@ Your Date
 
 . . .
 
-Open README.html
+The presentation is just a web page:  [README.html](https://donaldwuid.github.io/pandoc_revealjs_template/README.html#/template-title) 
 
 
 ## How it works
