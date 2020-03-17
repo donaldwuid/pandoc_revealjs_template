@@ -78,13 +78,13 @@ Use **pandoc** to convert **markdown** to presentation as html+reveal.js.
 
 
 
-## Youtube Video
+## Youtube Video {#YoutubePageId}
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vPguoeYTvMI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Internal links
 
-See the [Next topick Columns](#ColumnsIdentifier).
+See the [Previous topic](#YoutubePageId).
 
 ## Ending a list
 
@@ -140,7 +140,7 @@ or
 > - Item 3
 
 
-## Columns {#ColumnsIdentifier}
+## Columns
 
 ::: {.columns}
 ::: {.column width="40%"}
