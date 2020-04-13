@@ -3,8 +3,11 @@ title: "Template Title"
 author: Your Name
 fontsize: 12pt
 mainfont: Arial
-CJKmainfont: 黑体
 monofont: Courier New
+# macos
+#CJKmainfont: PingFang SC
+# windows
+CJKmainfont: 黑体
 numbersections: true
 ---
 
