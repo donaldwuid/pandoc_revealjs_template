@@ -81,7 +81,6 @@
 <!-- <section id="title-slide">
   <h1 class="title">Template Title</h1>
   <p class="author">Your Name</p>
-  <p class="date">Date</p>
 </section>
  -->
 
@@ -119,7 +118,7 @@
 <h2>How it works</h2>
 <p>Use <strong>pandoc</strong> to convert <strong>markdown</strong> to presentation as html+reveal.js.</p>
 <ul>
-<li><a href="http://pandoc.org">pandoc</a>: a markdown(, etc.) file converter</li>
+<li><a href="http://pandoc.org">pandoc</a>: a markdown(, etc.) document converter</li>
 <li><a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a>: a HTML presentation framework.</li>
 </ul>
 </section></section>
@@ -275,10 +274,10 @@ checked item</li>
 <section id="mathjax" class="slide level2">
 <h2>MathJax</h2>
 <ul>
-<li><a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">MathJax basic tutorial and quick reference</a></li>
-<li><a href="http://detexify.kirelabs.org/classify.html">Draw your LaTeX</a></li>
-<li>inline mode: <code>$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$</code>: <span class="math inline">\(\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}\)</span></li>
-<li>display mode: <code>$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$</code>: <span class="math display">\[\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}\]</span></li>
+<li><a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">MathJax basic tutorial and quick reference</a>,</li>
+<li>Draw your LaTeX <a href="http://detexify.kirelabs.org/classify.html">here</a>,</li>
+<li>inline mode: <span class="math inline">\(\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}\)</span>,</li>
+<li>display mode: <span class="math display">\[\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}\]</span></li>
 </ul>
 </section>
 <section id="codes" class="slide level2">
@@ -308,8 +307,26 @@ checked item</li>
 </section>
 <section id="build" class="slide level2">
 <h2>Build</h2>
-<p>run <em>build.bat</em> or <em>build.sh</em>, or execute in commandline:</p>
-<pre><code>pandoc main.md -t revealjs -s --slide-level 2 -V slideNumber=true --template=template/default.html -V theme=blood -V transition=slide --mathjax=https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML -o main.html</code></pre>
+<ul>
+<li>run <em>build_presentation</em> script,</li>
+<li>or execute in commandline:</li>
+</ul>
+<pre><code>pandoc README.md -t revealjs -s --slide-level 2 -V slideNumber=true --template=template/default.html -V theme=blood -V transition=slide --mathjax=https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML -o README.html</code></pre>
+</section></section>
+<section><section id="export-to-pdf" class="title-slide slide level1"><h1>Export to PDF</h1></section>
+<section id="web-browser" class="slide level2">
+<h2>Web Browser</h2>
+<p>Use your web browser to “print” the presentation web page to PDF.</p>
+</section>
+<section id="pandoc" class="slide level2">
+<h2>Pandoc</h2>
+<p>Pandoc uses LaTeX to convert your markdown to PDF,</p>
+<ul>
+<li>install LaTeX <a href="https://miktex.org/download">here</a>,</li>
+<li>in the head of this markdown file, make sure the metadata exists,</li>
+<li>make sure metadata’s font name existed in your computer, otherwise, change it,</li>
+<li>run the <em>build_pdf</em> script</li>
+</ul>
 </section></section>
 <section id="thanks" class="title-slide slide level1"><h1>Thanks</h1></section>
 <section id="references" class="title-slide slide level1"><h1>References</h1><p><a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Pandoc’s Markdown</a></p></section>

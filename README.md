@@ -1,6 +1,13 @@
-% Template Title
-% Your Name
-% Date
+---
+title: "Template Title"
+author: Your Name
+fontsize: 12pt
+mainfont: Arial
+CJKmainfont: 黑体
+monofont: Courier New
+numbersections: true
+---
+
 
 
 # Template Title
@@ -49,7 +56,7 @@ The presentation is just a web page:  [README.html](https://donaldwuid.github.io
 
 Use **pandoc** to convert **markdown** to presentation as html+reveal.js.
 
-- [pandoc](http://pandoc.org): a markdown(, etc.) file converter
+- [pandoc](http://pandoc.org): a markdown(, etc.) document converter
 - [reveal.js](http://lab.hakim.se/reveal-js/#/): a HTML presentation framework.
 
 
@@ -188,10 +195,10 @@ speak this comment on this page
 
 ## MathJax
 
-* [MathJax basic tutorial and quick reference](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
-* [Draw your LaTeX](http://detexify.kirelabs.org/classify.html)
-* inline mode: `$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$`: $\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$
-* display mode: `$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$`: $$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
+- [MathJax basic tutorial and quick reference](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference),
+- Draw your LaTeX [here](http://detexify.kirelabs.org/classify.html),
+- inline mode: $\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$,
+- display mode: $$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
 
 
 ## Codes
@@ -235,10 +242,26 @@ install [pandoc](http://pandoc.org/installing.html) first.
 
 ## Build
 
-run *build.bat* or *build.sh*, or execute in commandline:
+- run *build_presentation* script, 
+- or execute in commandline:
 ```
-pandoc main.md -t revealjs -s --slide-level 2 -V slideNumber=true --template=template/default.html -V theme=blood -V transition=slide --mathjax=https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML -o main.html
+pandoc README.md -t revealjs -s --slide-level 2 -V slideNumber=true --template=template/default.html -V theme=blood -V transition=slide --mathjax=https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML -o README.html
 ```
+
+# Export to PDF
+
+## Web Browser
+
+Use your web browser to "print" the presentation web page to PDF.
+
+## Pandoc
+
+Pandoc uses LaTeX to convert your markdown to PDF,
+
+- install LaTeX [here](https://miktex.org/download),
+- in the head of this markdown file, make sure the metadata exists,
+- make sure metadata's font name existed in your computer, otherwise, change it,
+- run the *build_pdf* script
 
 
 # Thanks
