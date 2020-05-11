@@ -248,7 +248,7 @@ install [pandoc](http://pandoc.org/installing.html) first.
 - run *build_presentation* script, 
 - or execute in commandline:
 ```
-pandoc README.md -t revealjs -s --slide-level 2 -V slideNumber=true --template=template/default.html -V theme=blood -V transition=slide --mathjax=https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML -o README.html
+pandoc README.md -t revealjs -s --slide-level 3 -V slideNumber=true --template=template/default.html -V theme=blood -V transition=slide --mathjax=https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML -o README.html
 ```
 
 # Export to PDF
