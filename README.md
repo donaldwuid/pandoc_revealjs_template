@@ -82,9 +82,22 @@ Use **pandoc** to convert **markdown** to presentation as html+reveal.js.
 ![](assets/hearthstone.jpg){width=40%}
 
 
+## Background Image {data-background-image="./assets/hearthstone.jpg"}
+
 ## Local Video
 
+using `<video>`
+
+<video height="315" autoplay controls loop>
+    <source src="assets/video.mp4" type="video/mp4">
+</video>
+
+## Local Video
+
+using `<iframe>`
+
 <iframe width="560" height="315" src="assets/video.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 
 
@@ -227,15 +240,25 @@ You can customize styles in *default.html*
 ```js
 <style>
 .smaller { font-size: 0.8em }
+.smallest { font-size: 0.5em }
 </style>
+
 ```
 
 <div class="smaller">
-and use it here.
+and make content smaller by: 
 </div>
 
 ```
 <div class="smaller">...</div>
+```
+
+<div class="smallest">
+or smallest by: 
+</div>
+
+```
+<div class="smallest">...</div>
 ```
 
 # How to build
