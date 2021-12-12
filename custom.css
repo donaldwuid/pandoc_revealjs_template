@@ -1,0 +1,18 @@
+.reveal {
+  font-size: 100%;
+}
+
+.smaller {
+  font-size: 80%
+}
+.smallest {
+  font-size: 50%
+}
+
+.blurbackgrounds {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(50px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}

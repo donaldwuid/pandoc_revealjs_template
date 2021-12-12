@@ -65,6 +65,22 @@ Use **pandoc** to convert **markdown** to presentation as html+reveal.js.
 
 # Features
 
+## Titles with 1 slide
+
+Usually use title to separate slides
+
+## Titles with 2 slides
+
+For topic including several slides, you can use `---` to separate slides.
+
+To be continued...
+
+---
+
+Continued in a new slide
+
+
+
 ## Text Formats
 
 - *emphasized*
@@ -82,7 +98,15 @@ Use **pandoc** to convert **markdown** to presentation as html+reveal.js.
 ![](assets/hearthstone.jpg){width=40%}
 
 
-## Background Image {data-background-image="./assets/hearthstone.jpg"}
+## Background Image {background-image="./assets/hearthstone.jpg"}
+
+add background image by 
+
+```md
+Background Image {background-image="./assets/hearthstone.jpg"}
+```
+
+
 
 ## Local Video
 
@@ -98,12 +122,19 @@ using `<iframe>`
 
 <iframe width="560" height="315" src="assets/video.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
-
-
 ## Youtube Video {#YoutubePageId}
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vPguoeYTvMI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+## Background Video {background-image="./assets/video.mp4"}
+
+add background vide by 
+
+```md
+Background Video {background-image="./assets/video.mp4"}
+```
 
 ## Internal links
 
@@ -235,12 +266,12 @@ print("I'm Python!")
 
 ## Styles
 
-You can customize styles in *default.html*
+You can customize styles in *custom.css*
 
 ```js
 <style>
-.smaller { font-size: 0.8em }
-.smallest { font-size: 0.5em }
+.smaller { font-size: 80% }
+.smallest { font-size: 50% }
 </style>
 
 ```
@@ -271,14 +302,16 @@ install [pandoc](http://pandoc.org/installing.html) first.
 - run *build_presentation* script, 
 - or execute in commandline:
 ```
-pandoc README.md -t revealjs -s --slide-level 3 -V slideNumber=true --template=template/default.html -V theme=blood -V transition=slide --mathjax=https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML -o README.html
+pandoc README.md -t revealjs -s --css=custom.css --slide-level 3  -V slideNumber=true --template=pandoc-templates/default.revealjs -V theme=blood -V transition=slide --mathjax -o README.html
 ```
 
 # Export to PDF
 
 ## Web Browser
 
-Use your web browser to "print" the presentation web page to PDF.
+1. In your browser
+1. add `?print-pdf` to the url: `file:///...README.html?print-pdf`
+1. Use your web browser to "print" the presentation web page to PDF.
 
 ## Pandoc
 
