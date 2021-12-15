@@ -1,0 +1,43 @@
+
+// change your theme here
+@import "./reveal.js/css/theme/source/blood.scss";
+
+.reveal {
+  font-size: 120%;
+}
+
+strong {
+  color:$linkColorHover;
+}
+
+.smaller {
+  font-size: 80%;
+}
+.smallest {
+  font-size: 50%;
+}
+
+
+.dim .backgrounds {
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px) brightness(50%);
+}
+
+.dimmer .backgrounds {
+  -webkit-filter: blur(30px);
+  -moz-filter: blur(30px);
+  -o-filter: blur(30px);
+  -ms-filter: blur(30px);
+  filter: blur(30px) brightness(40%);
+}
+
+.dimmest .backgrounds {
+  -webkit-filter: blur(50px);
+  -moz-filter: blur(50px);
+  -o-filter: blur(50px);
+  -ms-filter: blur(50px);
+  filter: blur(50px) brightness(30%);
+}

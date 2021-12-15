@@ -107,6 +107,14 @@ Background Image {background-image="./assets/hearthstone.jpg"}
 ```
 
 
+## Custom style Background {background-image="./assets/hearthstone.jpg" data-state="dim"}
+
+add background image by 
+
+```md
+Custom style Background {background-image="./assets/hearthstone.jpg" data-state="dim"}
+```
+
 
 ## Local Video
 
@@ -128,12 +136,21 @@ using `<iframe>`
 
 
 
-## Background Video {background-image="./assets/video.mp4"}
+## Background Video {data-background-video="./assets/video.mp4"}
 
 add background vide by 
 
 ```md
-Background Video {background-image="./assets/video.mp4"}
+Background Video {data-background-video="./assets/video.mp4"}
+```
+
+
+## Custom style Background Video {data-background-video="./assets/video.mp4" data-state="dim"}
+
+add background vide by 
+
+```md
+Background Video {data-background-video="./assets/video.mp4" data-state="dim"}
 ```
 
 ## Internal links

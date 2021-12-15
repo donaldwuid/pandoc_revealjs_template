@@ -6,5 +6,8 @@ cd "$BASEDIR"
 CURRENT=`pwd`
 BASENAME=`basename "$CURRENT"`
 
+# brew install sass/sass/sass
+sass ./custom.scss ./custom.css
 
-pandoc README.md -t revealjs -s --css=custom.css -V revealjs-url=reveal.js --slide-level 3  -V slideNumber=true --template=pandoc-templates/default.revealjs -V theme=blood -V transition=slide --mathjax -o README.html
+# bres install pandoc
+pandoc README.md -t revealjs -s --css=custom.css -V revealjs-url=reveal.js --slide-level 3  -V slideNumber=true --template=pandoc-templates/default.revealjs -V transition=slide --mathjax -o README.html

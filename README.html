@@ -84,7 +84,7 @@
     code span.vs { color: #4070a0; } /* VerbatimString */
     code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="reveal.js/dist/theme/blood.css" id="theme">
+  <link rel="stylesheet" href="reveal.js/dist/theme/black.css" id="theme">
   <link rel="stylesheet" href="custom.css"/>
 </head>
 <body>
@@ -184,6 +184,12 @@
 <div class="sourceCode" id="cb1"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Background Image {background-image=&quot;./assets/hearthstone.jpg&quot;}</span></code></pre></div>
 </section>
 
+<section id="custom-style-background" class="title-slide slide level2" data-background-image="./assets/hearthstone.jpg" data-state="dim">
+<h2 data-background-image="./assets/hearthstone.jpg" data-state="dim">Custom style Background</h2>
+<p>add background image by</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Custom style Background {background-image=&quot;./assets/hearthstone.jpg&quot; data-state=&quot;dim&quot;}</span></code></pre></div>
+</section>
+
 <section id="local-video" class="title-slide slide level2">
 <h2>Local Video</h2>
 <p>using <code>&lt;video&gt;</code></p>
@@ -205,10 +211,16 @@
 </iframe>
 </section>
 
-<section id="background-video" class="title-slide slide level2" data-background-image="./assets/video.mp4">
-<h2 data-background-image="./assets/video.mp4">Background Video</h2>
+<section id="background-video" class="title-slide slide level2" data-background-video="./assets/video.mp4">
+<h2 data-background-video="./assets/video.mp4">Background Video</h2>
 <p>add background vide by</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Background Video {background-image=&quot;./assets/video.mp4&quot;}</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Background Video {data-background-video=&quot;./assets/video.mp4&quot;}</span></code></pre></div>
+</section>
+
+<section id="custom-style-background-video" class="title-slide slide level2" data-background-video="./assets/video.mp4" data-state="dim">
+<h2 data-background-video="./assets/video.mp4" data-state="dim">Custom style Background Video</h2>
+<p>add background vide by</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Background Video {data-background-video=&quot;./assets/video.mp4&quot; data-state=&quot;dim&quot;}</span></code></pre></div>
 </section>
 
 <section id="internal-links" class="title-slide slide level2">
@@ -354,21 +366,21 @@ checked item</li>
 
 <section id="codes" class="title-slide slide level2">
 <h2>Codes</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">int</span> argc<span class="op">,</span> <span class="dt">char</span><span class="op">**</span> argv<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>cout<span class="op"> &lt;&lt;</span> <span class="st">&quot;I&#39;m c++!&quot;</span><span class="op">;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;I&#39;m Python!&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">int</span> argc<span class="op">,</span> <span class="dt">char</span><span class="op">**</span> argv<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>cout<span class="op"> &lt;&lt;</span> <span class="st">&quot;I&#39;m c++!&quot;</span><span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;I&#39;m Python!&quot;</span>)</span></code></pre></div>
 </section>
 
 <section id="styles" class="title-slide slide level2">
 <h2>Styles</h2>
 <p>You can customize styles in <em>custom.css</em></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>style<span class="op">&gt;</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="op">.</span><span class="at">smaller</span> { font<span class="op">-</span><span class="dt">size</span><span class="op">:</span> <span class="dv">80</span><span class="op">%</span> }</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="op">.</span><span class="at">smallest</span> { font<span class="op">-</span><span class="dt">size</span><span class="op">:</span> <span class="dv">50</span><span class="op">%</span> }</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>style<span class="op">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>style<span class="op">&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="op">.</span><span class="at">smaller</span> { font<span class="op">-</span><span class="dt">size</span><span class="op">:</span> <span class="dv">80</span><span class="op">%</span> }</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="op">.</span><span class="at">smallest</span> { font<span class="op">-</span><span class="dt">size</span><span class="op">:</span> <span class="dv">50</span><span class="op">%</span> }</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>style<span class="op">&gt;</span></span></code></pre></div>
 <div class="smaller">
 <p>and make content smaller by:</p>
 </div>
@@ -473,7 +485,7 @@ checked item</li>
 
         // Add the current slide number to the URL hash so that reloading the
         // page/copying the URL will return you to the same slide
-        hash: true,
+        hash: false,
 
         // Start with 1 for the hash rather than 0
         hashOneBasedIndex: false,
