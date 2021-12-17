@@ -106,13 +106,65 @@ add background image by
 Background Image {background-image="./assets/hearthstone.jpg"}
 ```
 
+## Custom style Background {background-image="./assets/hearthstone.jpg" data-state="dim"}
+
+define custom style in scss or css
+
+```scss
+// custom.scss
+
+.dim .backgrounds {
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+  opacity: 0.7;
+}
+
+.dimmer .backgrounds {
+  -webkit-filter: blur(30px);
+  -moz-filter: blur(30px);
+  -o-filter: blur(30px);
+  -ms-filter: blur(30px);
+  filter: blur(30px);
+  opacity: 0.5;
+}
+
+.dimmest .backgrounds {
+  -webkit-filter: blur(50px);
+  -moz-filter: blur(50px);
+  -o-filter: blur(50px);
+  -ms-filter: blur(50px);
+  filter: blur(50px);
+  opacity: 0.3;
+}
+```
 
 ## Custom style Background {background-image="./assets/hearthstone.jpg" data-state="dim"}
 
-add background image by 
+`data-state="dim"`
 
 ```md
 Custom style Background {background-image="./assets/hearthstone.jpg" data-state="dim"}
+```
+
+
+## Custom style Background {background-image="./assets/hearthstone.jpg" data-state="dimmer"}
+
+`data-state="dimmer"`
+
+```md
+Custom style Background {background-image="./assets/hearthstone.jpg" data-state="dimmer"}
+```
+
+
+## Custom style Background {background-image="./assets/hearthstone.jpg" data-state="dimmest"}
+
+`data-state="dimmest"`
+
+```md
+Custom style Background {background-image="./assets/hearthstone.jpg" data-state="dimmest"}
 ```
 
 

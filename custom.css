@@ -410,7 +410,8 @@ strong {
   -moz-filter: blur(10px);
   -o-filter: blur(10px);
   -ms-filter: blur(10px);
-  filter: blur(10px) brightness(50%);
+  filter: blur(10px);
+  opacity: 0.7;
 }
 
 .dimmer .backgrounds {
@@ -418,7 +419,8 @@ strong {
   -moz-filter: blur(30px);
   -o-filter: blur(30px);
   -ms-filter: blur(30px);
-  filter: blur(30px) brightness(40%);
+  filter: blur(30px);
+  opacity: 0.5;
 }
 
 .dimmest .backgrounds {
@@ -426,7 +428,8 @@ strong {
   -moz-filter: blur(50px);
   -o-filter: blur(50px);
   -ms-filter: blur(50px);
-  filter: blur(50px) brightness(30%);
+  filter: blur(50px);
+  opacity: 0.3;
 }
 
 /*# sourceMappingURL=custom.css.map */
