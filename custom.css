@@ -406,30 +406,30 @@ strong {
 }
 
 .dim .backgrounds {
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+  opacity: 0.5;
+}
+
+.dimmer .backgrounds {
   -webkit-filter: blur(10px);
   -moz-filter: blur(10px);
   -o-filter: blur(10px);
   -ms-filter: blur(10px);
   filter: blur(10px);
-  opacity: 0.7;
+  opacity: 0.4;
 }
 
-.dimmer .backgrounds {
+.dimmest .backgrounds {
   -webkit-filter: blur(30px);
   -moz-filter: blur(30px);
   -o-filter: blur(30px);
   -ms-filter: blur(30px);
   filter: blur(30px);
-  opacity: 0.5;
-}
-
-.dimmest .backgrounds {
-  -webkit-filter: blur(50px);
-  -moz-filter: blur(50px);
-  -o-filter: blur(50px);
-  -ms-filter: blur(50px);
-  filter: blur(50px);
-  opacity: 0.3;
+  opacity: 0.2;
 }
 
 /*# sourceMappingURL=custom.css.map */

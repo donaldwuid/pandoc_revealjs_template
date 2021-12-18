@@ -57,7 +57,7 @@ The presentation is just a web page:  [README.html](https://donaldwuid.github.io
 
 ## How it works
 
-Use **pandoc** to convert **markdown** to presentation as html+reveal.js.
+Use **pandoc** to convert **markdown** to presentation as **html+reveal.js**.
 
 - [pandoc](http://pandoc.org): a markdown(, etc.) document converter
 - [reveal.js](http://lab.hakim.se/reveal-js/#/): a HTML presentation framework.
@@ -77,7 +77,7 @@ To be continued...
 
 ---
 
-Continued in a new slide
+Former title is Continued in a new slide
 
 
 
@@ -90,7 +90,17 @@ Continued in a new slide
 - P~a\ cat~
 - *\*escape\**
 - `*Verbatim*`
-- [Small caps]{.smaller}
+- [Custom style: smallest]{.smallest}
+
+## Notes
+
+press `S` to show the page note.
+
+::: notes
+
+this amazing comment on this page may help you a lot!
+
+:::
 
 
 ## Image
@@ -106,67 +116,37 @@ add background image by
 Background Image {background-image="./assets/hearthstone.jpg"}
 ```
 
-## Custom style Background {background-image="./assets/hearthstone.jpg" data-state="dim"}
-
-define custom style in scss or css
-
-```scss
-// custom.scss
-
-.dim .backgrounds {
-  -webkit-filter: blur(10px);
-  -moz-filter: blur(10px);
-  -o-filter: blur(10px);
-  -ms-filter: blur(10px);
-  filter: blur(10px);
-  opacity: 0.7;
-}
-
-.dimmer .backgrounds {
-  -webkit-filter: blur(30px);
-  -moz-filter: blur(30px);
-  -o-filter: blur(30px);
-  -ms-filter: blur(30px);
-  filter: blur(30px);
-  opacity: 0.5;
-}
-
-.dimmest .backgrounds {
-  -webkit-filter: blur(50px);
-  -moz-filter: blur(50px);
-  -o-filter: blur(50px);
-  -ms-filter: blur(50px);
-  filter: blur(50px);
-  opacity: 0.3;
-}
-```
 
 ## Custom style Background {background-image="./assets/hearthstone.jpg" data-state="dim"}
 
-`data-state="dim"`
+custom style by adding `data-state="dim"`
 
 ```md
 Custom style Background {background-image="./assets/hearthstone.jpg" data-state="dim"}
 ```
 
+Note, require `.dim` in custom.scss
+
 
 ## Custom style Background {background-image="./assets/hearthstone.jpg" data-state="dimmer"}
 
-`data-state="dimmer"`
+custom style by adding `data-state="dimmer"`
 
 ```md
 Custom style Background {background-image="./assets/hearthstone.jpg" data-state="dimmer"}
 ```
 
+Note, require `.dimmer` in custom.scss
 
 ## Custom style Background {background-image="./assets/hearthstone.jpg" data-state="dimmest"}
 
-`data-state="dimmest"`
+custom style by adding `data-state="dimmest"`
 
 ```md
 Custom style Background {background-image="./assets/hearthstone.jpg" data-state="dimmest"}
 ```
 
+Note, require `.dimmest` in custom.scss
 
 ## Local Video
 
@@ -197,12 +177,12 @@ Background Video {data-background-video="./assets/video.mp4"}
 ```
 
 
-## Custom style Background Video {data-background-video="./assets/video.mp4" data-state="dim"}
+## Custom style Background Video {data-background-video="./assets/video.mp4" data-state="dimmest"}
 
 add background vide by 
 
 ```md
-Background Video {data-background-video="./assets/video.mp4" data-state="dim"}
+Background Video {data-background-video="./assets/video.mp4" data-state="dimmest"}
 ```
 
 ## Internal links
@@ -283,16 +263,6 @@ Column Two
 :::
 :::
 
-## Notes
-
-press `S` to show the page note.
-
-::: notes
-
-speak this comment on this page
-
-:::
-
 
 ## Table
 
@@ -350,39 +320,81 @@ and make content smaller by:
 </div>
 
 ```
-<div class="smaller">...</div>
+[make single line smaller]{.smaller}
+
+<div class="smaller">
+whole block inside a page section
+</div>
 ```
+
+[or smallest by: ]{.smallest}
+
+```
+[make single line smallest]{.smallest}
 
 <div class="smallest">
-or smallest by: 
+whole block inside a page section
 </div>
-
-```
-<div class="smallest">...</div>
 ```
 
 # How to build
 
 ## Install
+
 install [pandoc](http://pandoc.org/installing.html) first.
+
+```sh
+# mac
+brew install pandoc
+```
+```cmd
+:: windows
+choco install pandoc
+```
 
 ## Build
 
-- run *build_presentation* script, 
+- run **./build_presentation** script, 
 - or execute in commandline:
+
+
+```sh
+pandoc README.md -t revealjs -s --css=custom.css --mathjax --template=pandoc-templates/default.revealjs -V revealjs-url=reveal.js --slide-level 3  -V slideNumber=true  -V transition=slide -V backgroundTransition=none -o README.html
 ```
-pandoc README.md -t revealjs -s --css=custom.css --slide-level 3  -V slideNumber=true --template=pandoc-templates/default.revealjs -V theme=blood -V transition=slide --mathjax -o README.html
+
+## Custom style
+
+this template uses **custom.css** for custom style. 
+
+[sass](https://sass-lang.com/install) is required if you want to rebuild **custom.scss** into **custom .css**
+
+- install scss first
+```sh
+# mac
+brew install sass/sass/sass
 ```
+```cmd
+:: windows
+choco install sass
+```
+- build custom.scss into custom.css
+```sh
+sass ./custom.scss ./custom.css
+```
+
+run **./build** script to build both css and presentation.
+
+
 
 # Export to PDF
 
-## Web Browser
+## PDF by RevealJS `?print-pdf`
 
 1. In your browser
 1. add `?print-pdf` to the url: `file:///...README.html?print-pdf`
 1. Use your web browser to "print" the presentation web page to PDF.
 
-## Pandoc
+## PDF by Pandoc
 
 Pandoc uses LaTeX to convert your markdown to PDF,
 
