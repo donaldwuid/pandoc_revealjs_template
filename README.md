@@ -30,8 +30,9 @@ Your Date
 <div class="smaller">
 
 - `Space`: next page，
-- `Esc`: overview，
 - `Arrow`: navigation，
+- `F`: fullscreen,
+- `Esc` or `O`: overview，
 - `Alt + mouse left`：magnify，
 - `S`：notes
 
@@ -90,7 +91,15 @@ Former title is Continued in a new slide
 - P~a\ cat~
 - *\*escape\**
 - `*Verbatim*`
+
+
+## Text Custom Styles
+
 - [Custom style: smallest]{.smallest}
+- [Custom style: dim]{.dim}
+- [Custom style: invert]{.invert}
+
+see or edit **custom.scss** for your own custom style
 
 ## Notes
 
@@ -117,36 +126,36 @@ Background Image {background-image="./assets/hearthstone.jpg"}
 ```
 
 
-## Custom style Background {background-image="./assets/hearthstone.jpg" data-state="dim"}
+## Custom style Background {background-image="./assets/hearthstone.jpg" data-state="bgdim"}
 
-custom style by adding `data-state="dim"`
-
-```md
-Custom style Background {background-image="./assets/hearthstone.jpg" data-state="dim"}
-```
-
-Note, require `.dim` in custom.scss
-
-
-## Custom style Background {background-image="./assets/hearthstone.jpg" data-state="dimmer"}
-
-custom style by adding `data-state="dimmer"`
+custom style by adding `data-state="bgdim"`
 
 ```md
-Custom style Background {background-image="./assets/hearthstone.jpg" data-state="dimmer"}
+Custom style Background {background-image="./assets/hearthstone.jpg" data-state="bgdim"}
 ```
 
-Note, require `.dimmer` in custom.scss
+Note, require `.bgdim` in custom.scss
 
-## Custom style Background {background-image="./assets/hearthstone.jpg" data-state="dimmest"}
 
-custom style by adding `data-state="dimmest"`
+## Custom style Background {background-image="./assets/hearthstone.jpg" data-state="bgdimmer"}
+
+custom style by adding `data-state="bgdimmer"`
 
 ```md
-Custom style Background {background-image="./assets/hearthstone.jpg" data-state="dimmest"}
+Custom style Background {background-image="./assets/hearthstone.jpg" data-state="bgdimmer"}
 ```
 
-Note, require `.dimmest` in custom.scss
+Note, require `.bgdimmer` in custom.scss
+
+## Custom style Background {background-image="./assets/hearthstone.jpg" data-state="bgdimmest"}
+
+custom style by adding `data-state="bgdimmest"`
+
+```md
+Custom style Background {background-image="./assets/hearthstone.jpg" data-state="bgdimmest"}
+```
+
+Note, require `.bgdimmest` in custom.scss
 
 ## Local Video
 
@@ -177,12 +186,12 @@ Background Video {data-background-video="./assets/video.mp4"}
 ```
 
 
-## Custom style Background Video {data-background-video="./assets/video.mp4" data-state="dimmest"}
+## Custom style Background Video {data-background-video="./assets/video.mp4" data-state="bgdimmest"}
 
 add background vide by 
 
 ```md
-Background Video {data-background-video="./assets/video.mp4" data-state="dimmest"}
+Background Video {data-background-video="./assets/video.mp4" data-state="bgdimmest"}
 ```
 
 ## Internal links
@@ -242,6 +251,40 @@ or
 > - Item 2
 > - Item 3
 
+
+## Auto Animate {data-auto-animate="1"}
+
+enable auto slide by `{data-auto-animate="1"}`
+
+
+Animated lists:
+
+- A
+- C
+- E
+
+
+Animated `div`:
+
+<div data-id="box" style="height: 200px; background: blue;"></div>
+
+
+## Auto Animate {data-auto-animate="1"}
+
+enable auto slide by `{data-auto-animate="1"}`
+
+Animated lists:
+
+- A
+- B
+- C
+- D
+- E
+
+
+Animated `div`:
+
+<div data-id="box" style="height: 50px; background: salmon;"></div>
 
 ## Columns
 

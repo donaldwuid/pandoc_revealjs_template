@@ -17,7 +17,11 @@ strong {
   font-size: 50%;
 }
 
-.dim .backgrounds {
+.invert {
+  filter: invert(0.8);
+}
+
+.dim {
   -webkit-filter: blur(2px);
   -moz-filter: blur(2px);
   -o-filter: blur(2px);
@@ -26,7 +30,7 @@ strong {
   opacity: 0.5;
 }
 
-.dimmer .backgrounds {
+.dimmer {
   -webkit-filter: blur(10px);
   -moz-filter: blur(10px);
   -o-filter: blur(10px);
@@ -35,11 +39,23 @@ strong {
   opacity: 0.4;
 }
 
-.dimmest .backgrounds {
+.dimmest {
   -webkit-filter: blur(30px);
   -moz-filter: blur(30px);
   -o-filter: blur(30px);
   -ms-filter: blur(30px);
   filter: blur(30px);
   opacity: 0.2;
+}
+
+.bgdim .backgrounds {
+  @extend .dim;
+}
+
+.bgdimmer .backgrounds {
+  @extend .dimmer;
+}
+
+.bgdimmest .backgrounds {
+  @extend .dimmest;
 }

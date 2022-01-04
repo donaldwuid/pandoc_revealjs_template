@@ -108,8 +108,9 @@
 <div class="smaller">
 <ul>
 <li><code>Space</code>: next page，</li>
-<li><code>Esc</code>: overview，</li>
 <li><code>Arrow</code>: navigation，</li>
+<li><code>F</code>: fullscreen,</li>
+<li><code>Esc</code> or <code>O</code>: overview，</li>
 <li><code>Alt + mouse left</code>：magnify，</li>
 <li><code>S</code>：notes</li>
 </ul>
@@ -169,8 +170,17 @@
 <li>P<sub>a cat</sub></li>
 <li><em>*escape*</em></li>
 <li><code>*Verbatim*</code></li>
-<li><span class="smallest">Custom style: smallest</span></li>
 </ul>
+</section>
+
+<section id="text-custom-styles" class="title-slide slide level2">
+<h2>Text Custom Styles</h2>
+<ul>
+<li><span class="smallest">Custom style: smallest</span></li>
+<li><span class="dim">Custom style: dim</span></li>
+<li><span class="invert">Custom style: invert</span></li>
+</ul>
+<p>see or edit <strong>custom.scss</strong> for your own custom style</p>
 </section>
 
 <section id="notes" class="title-slide slide level2">
@@ -192,25 +202,25 @@
 <div class="sourceCode" id="cb1"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Background Image {background-image=&quot;./assets/hearthstone.jpg&quot;}</span></code></pre></div>
 </section>
 
-<section id="custom-style-background" class="title-slide slide level2" data-background-image="./assets/hearthstone.jpg" data-state="dim">
-<h2 data-background-image="./assets/hearthstone.jpg" data-state="dim">Custom style Background</h2>
-<p>custom style by adding <code>data-state="dim"</code></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Custom style Background {background-image=&quot;./assets/hearthstone.jpg&quot; data-state=&quot;dim&quot;}</span></code></pre></div>
-<p>Note, require <code>.dim</code> in custom.scss</p>
+<section id="custom-style-background" class="title-slide slide level2" data-background-image="./assets/hearthstone.jpg" data-state="bgdim">
+<h2 data-background-image="./assets/hearthstone.jpg" data-state="bgdim">Custom style Background</h2>
+<p>custom style by adding <code>data-state="bgdim"</code></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Custom style Background {background-image=&quot;./assets/hearthstone.jpg&quot; data-state=&quot;bgdim&quot;}</span></code></pre></div>
+<p>Note, require <code>.bgdim</code> in custom.scss</p>
 </section>
 
-<section id="custom-style-background-1" class="title-slide slide level2" data-background-image="./assets/hearthstone.jpg" data-state="dimmer">
-<h2 data-background-image="./assets/hearthstone.jpg" data-state="dimmer">Custom style Background</h2>
-<p>custom style by adding <code>data-state="dimmer"</code></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Custom style Background {background-image=&quot;./assets/hearthstone.jpg&quot; data-state=&quot;dimmer&quot;}</span></code></pre></div>
-<p>Note, require <code>.dimmer</code> in custom.scss</p>
+<section id="custom-style-background-1" class="title-slide slide level2" data-background-image="./assets/hearthstone.jpg" data-state="bgdimmer">
+<h2 data-background-image="./assets/hearthstone.jpg" data-state="bgdimmer">Custom style Background</h2>
+<p>custom style by adding <code>data-state="bgdimmer"</code></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Custom style Background {background-image=&quot;./assets/hearthstone.jpg&quot; data-state=&quot;bgdimmer&quot;}</span></code></pre></div>
+<p>Note, require <code>.bgdimmer</code> in custom.scss</p>
 </section>
 
-<section id="custom-style-background-2" class="title-slide slide level2" data-background-image="./assets/hearthstone.jpg" data-state="dimmest">
-<h2 data-background-image="./assets/hearthstone.jpg" data-state="dimmest">Custom style Background</h2>
-<p>custom style by adding <code>data-state="dimmest"</code></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Custom style Background {background-image=&quot;./assets/hearthstone.jpg&quot; data-state=&quot;dimmest&quot;}</span></code></pre></div>
-<p>Note, require <code>.dimmest</code> in custom.scss</p>
+<section id="custom-style-background-2" class="title-slide slide level2" data-background-image="./assets/hearthstone.jpg" data-state="bgdimmest">
+<h2 data-background-image="./assets/hearthstone.jpg" data-state="bgdimmest">Custom style Background</h2>
+<p>custom style by adding <code>data-state="bgdimmest"</code></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Custom style Background {background-image=&quot;./assets/hearthstone.jpg&quot; data-state=&quot;bgdimmest&quot;}</span></code></pre></div>
+<p>Note, require <code>.bgdimmest</code> in custom.scss</p>
 </section>
 
 <section id="local-video" class="title-slide slide level2">
@@ -240,10 +250,10 @@
 <div class="sourceCode" id="cb5"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>Background Video {data-background-video=&quot;./assets/video.mp4&quot;}</span></code></pre></div>
 </section>
 
-<section id="custom-style-background-video" class="title-slide slide level2" data-background-video="./assets/video.mp4" data-state="dimmest">
-<h2 data-background-video="./assets/video.mp4" data-state="dimmest">Custom style Background Video</h2>
+<section id="custom-style-background-video" class="title-slide slide level2" data-background-video="./assets/video.mp4" data-state="bgdimmest">
+<h2 data-background-video="./assets/video.mp4" data-state="bgdimmest">Custom style Background Video</h2>
 <p>add background vide by</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Background Video {data-background-video=&quot;./assets/video.mp4&quot; data-state=&quot;dimmest&quot;}</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Background Video {data-background-video=&quot;./assets/video.mp4&quot; data-state=&quot;bgdimmest&quot;}</span></code></pre></div>
 </section>
 
 <section id="internal-links" class="title-slide slide level2">
@@ -307,6 +317,38 @@
 <li class="fragment">Item 2</li>
 <li class="fragment">Item 3</li>
 </ul>
+</section>
+
+<section id="auto-animate" class="title-slide slide level2" data-auto-animate="1">
+<h2 data-auto-animate="1">Auto Animate</h2>
+<p>enable auto slide by <code>{data-auto-animate="1"}</code></p>
+<p>Animated lists:</p>
+<ul>
+<li>A</li>
+<li>C</li>
+<li>E</li>
+</ul>
+<p>Animated <code>div</code>:</p>
+<div data-id="box" style="height: 200px; background: blue;">
+
+</div>
+</section>
+
+<section id="auto-animate-1" class="title-slide slide level2" data-auto-animate="1">
+<h2 data-auto-animate="1">Auto Animate</h2>
+<p>enable auto slide by <code>{data-auto-animate="1"}</code></p>
+<p>Animated lists:</p>
+<ul>
+<li>A</li>
+<li>B</li>
+<li>C</li>
+<li>D</li>
+<li>E</li>
+</ul>
+<p>Animated <code>div</code>:</p>
+<div data-id="box" style="height: 50px; background: salmon;">
+
+</div>
 </section>
 
 <section id="columns" class="title-slide slide level2">
