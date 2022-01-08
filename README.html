@@ -483,6 +483,20 @@ choco install pandoc</code></pre>
 <div class="sourceCode" id="cb14"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> README.md <span class="at">-t</span> revealjs <span class="at">-s</span> <span class="at">--css</span><span class="op">=</span>custom.css <span class="at">--mathjax</span> <span class="at">--template</span><span class="op">=</span>pandoc-templates/default.revealjs <span class="at">-V</span> revealjs-url=reveal.js <span class="at">--slide-level</span> 3 <span class="at">-o</span> README.html</span></code></pre></div>
 </section>
 
+<section id="CustomBuildSettingsId" class="title-slide slide level2">
+<h2>Custom build settings</h2>
+<p>adjust custom build settings in YAML metadata block (the start of this markdown)</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">numbersections</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">history</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">slideNumber</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">transition</span><span class="kw">:</span><span class="at"> slide</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="fu">backgroundTransition</span><span class="kw">:</span><span class="at"> none</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
+<p>or in the command line script:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> README.md ... <span class="at">-V</span> revealjs-url=reveal.js ... <span class="at">-o</span> README.html</span></code></pre></div>
+</section>
+
 <section id="custom-style" class="title-slide slide level2">
 <h2>Custom style</h2>
 <p>this template uses <strong>custom.css</strong> for custom style.</p>
@@ -490,29 +504,15 @@ choco install pandoc</code></pre>
 <ul>
 <li>install scss first</li>
 </ul>
-<div class="sourceCode" id="cb15"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mac</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install sass/sass/sass</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mac</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install sass/sass/sass</span></code></pre></div>
 <pre class="cmd"><code>:: windows
 choco install sass</code></pre>
 <ul>
 <li>build custom.scss into custom.css</li>
 </ul>
-<div class="sourceCode" id="cb17"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sass</span> ./custom.scss ./custom.css</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sass</span> ./custom.scss ./custom.css</span></code></pre></div>
 <p>run <strong>./build</strong> script to build both css and presentation.</p>
-</section>
-
-<section id="CustomBuildSettingsId" class="title-slide slide level2">
-<h2>Custom build settings</h2>
-<p>adjust custom build settings in YAML metadata block (the start of this markdown)</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">numbersections</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">history</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">slideNumber</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="fu">transition</span><span class="kw">:</span><span class="at"> slide</span></span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="fu">backgroundTransition</span><span class="kw">:</span><span class="at"> none</span></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
-<p>or in the command line script:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> README.md ... <span class="at">-V</span> revealjs-url=reveal.js ... <span class="at">-o</span> README.html</span></code></pre></div>
 </section>
 </section>
 <section>

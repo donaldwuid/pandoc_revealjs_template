@@ -426,6 +426,28 @@ choco install pandoc
 pandoc README.md -t revealjs -s --css=custom.css --mathjax --template=pandoc-templates/default.revealjs -V revealjs-url=reveal.js --slide-level 3 -o README.html
 ```
 
+## Custom build settings  {#CustomBuildSettingsId}
+
+adjust custom build settings in YAML metadata block (the start of this markdown)
+
+```yaml
+---
+numbersections: true
+history: true
+slideNumber: true
+transition: slide
+backgroundTransition: none
+---
+```
+
+or in the command line script:
+
+```sh
+pandoc README.md ... -V revealjs-url=reveal.js ... -o README.html
+```
+
+
+
 ## Custom style
 
 this template uses **custom.css** for custom style. 
@@ -447,27 +469,6 @@ sass ./custom.scss ./custom.css
 ```
 
 run **./build** script to build both css and presentation.
-
-
-## Custom build settings  {#CustomBuildSettingsId}
-
-adjust custom build settings in YAML metadata block (the start of this markdown)
-
-```yaml
----
-numbersections: true
-history: true
-slideNumber: true
-transition: slide
-backgroundTransition: none
----
-```
-
-or in the command line script:
-
-```sh
-pandoc README.md ... -V revealjs-url=reveal.js ... -o README.html
-```
 
 
 
