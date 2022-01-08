@@ -1,10 +1,12 @@
 
 // change your theme here
-@import "./reveal.js/css/theme/source/blood.scss";
+@import "./reveal.js/css/theme/source/simple.scss";
 
 .reveal {
   font-size: 120%;
 }
+
+
 
 strong {
   color:$linkColorHover;
@@ -58,4 +60,26 @@ strong {
 
 .bgdimmest .backgrounds {
   @extend .dimmest;
+}
+
+.floatTL {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.floatTR {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.floatBL {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.floatBR {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }

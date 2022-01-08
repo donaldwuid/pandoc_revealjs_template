@@ -3,4 +3,4 @@
 	url = https://github.com/hakimel/reveal.js.git
 [submodule "pandoc-templates"]
 	path = pandoc-templates
-	url = https://github.com/jgm/pandoc-templates.git
+	url = https://github.com/donaldwuid/pandoc-templates.git

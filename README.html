@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Your Name">
-  <title>Template Title</title>
+  <title>Your Title</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -88,24 +88,20 @@
   <link rel="stylesheet" href="custom.css"/>
 </head>
 <body>
+<div class="floatTR">
+<img src="assets/pandoc.png" height="32"/><img src="assets/revealjs.png" height="32"/>
+</div>
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide">
-  <h1 class="title">Template Title</h1>
+<section id="title-slide" data-background-image="./assets/hearthstone.jpg" data-background-opacity="0.3" data-background-size="cover">
+  <h1 class="title">Your Title</h1>
   <p class="author">Your Name</p>
 </section>
 
-<section>
-<section id="template-title" class="title-slide slide level1">
-<h1>Template Title</h1>
-<p>Your Name</p>
-<p>Your Date</p>
-<div class="columns">
-<div class="column" style="width:80%;">
-
-</div><div class="column" style="width:20%;">
-<div class="smaller">
+<section id="quick-guide" class="title-slide slide level2">
+<h2>Quick guide</h2>
+<div class="smallest">
 <ul>
 <li><code>Space</code>: next page，</li>
 <li><code>Arrow</code>: navigation，</li>
@@ -115,9 +111,8 @@
 <li><code>S</code>：notes</li>
 </ul>
 </div>
-</div>
-</div>
 </section>
+
 <section id="what-is-it" class="title-slide slide level2">
 <h2>What is it</h2>
 <div>
@@ -133,13 +128,15 @@
 
 <section id="how-it-works" class="title-slide slide level2">
 <h2>How it works</h2>
-<p>Use <strong>pandoc</strong> to convert <strong>markdown</strong> to presentation as <strong>html+reveal.js</strong>.</p>
+<p>it uses <strong>pandoc</strong> to convert <strong>markdown</strong> to presentation as <strong>html+reveal.js</strong>.</p>
 <ul>
+<li><code>pandoc(markdown) -&gt; html</code></li>
 <li><a href="http://pandoc.org">pandoc</a>: a markdown(, etc.) document converter</li>
 <li><a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a>: a HTML presentation framework.</li>
 </ul>
+<p><img data-src="./assets/pandoc.png" height="64" /> <img data-src="./assets/revealjs.png" height="64" /></p>
 </section>
-</section>
+
 <section>
 <section id="features" class="title-slide slide level1">
 <h1>Features</h1>
@@ -180,7 +177,30 @@
 <li><span class="dim">Custom style: dim</span></li>
 <li><span class="invert">Custom style: invert</span></li>
 </ul>
-<p>see or edit <strong>custom.scss</strong> for your own custom style</p>
+<p><span class="smallest">see or edit <strong>./custom.scss</strong> for your own custom style</span></p>
+</section>
+
+<section id="general-custom-styles" class="title-slide slide level2">
+<h2>General Custom Styles</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>style<span class="op">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">.</span><span class="at">smaller</span> { font<span class="op">-</span><span class="dt">size</span><span class="op">:</span> <span class="dv">80</span><span class="op">%</span> }</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">.</span><span class="at">smallest</span> { font<span class="op">-</span><span class="dt">size</span><span class="op">:</span> <span class="dv">50</span><span class="op">%</span> }</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>style<span class="op">&gt;</span></span></code></pre></div>
+<div class="smaller">
+<p>and make content smaller by:</p>
+</div>
+<pre><code>[make single line smaller]{.smaller}
+
+&lt;div class=&quot;smaller&quot;&gt;
+whole block inside a page section
+&lt;/div&gt;</code></pre>
+<p><span class="smallest">or smallest by:</span></p>
+<pre><code>[make single line smallest]{.smallest}
+
+&lt;div class=&quot;smallest&quot;&gt;
+whole block inside a page section
+&lt;/div&gt;</code></pre>
+<p><span class="smallest">see or edit <strong>./custom.scss</strong> for your own custom style</span></p>
 </section>
 
 <section id="notes" class="title-slide slide level2">
@@ -199,28 +219,14 @@
 <section id="background-image" class="title-slide slide level2" data-background-image="./assets/hearthstone.jpg">
 <h2 data-background-image="./assets/hearthstone.jpg">Background Image</h2>
 <p>add background image by</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Background Image {background-image=&quot;./assets/hearthstone.jpg&quot;}</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Background Image {background-image=&quot;./assets/hearthstone.jpg&quot;}</span></code></pre></div>
 </section>
 
-<section id="custom-style-background" class="title-slide slide level2" data-background-image="./assets/hearthstone.jpg" data-state="bgdim">
-<h2 data-background-image="./assets/hearthstone.jpg" data-state="bgdim">Custom style Background</h2>
-<p>custom style by adding <code>data-state="bgdim"</code></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Custom style Background {background-image=&quot;./assets/hearthstone.jpg&quot; data-state=&quot;bgdim&quot;}</span></code></pre></div>
-<p>Note, require <code>.bgdim</code> in custom.scss</p>
-</section>
-
-<section id="custom-style-background-1" class="title-slide slide level2" data-background-image="./assets/hearthstone.jpg" data-state="bgdimmer">
+<section id="custom-style-background" class="title-slide slide level2" data-background-image="./assets/hearthstone.jpg" data-state="bgdimmer">
 <h2 data-background-image="./assets/hearthstone.jpg" data-state="bgdimmer">Custom style Background</h2>
 <p>custom style by adding <code>data-state="bgdimmer"</code></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Custom style Background {background-image=&quot;./assets/hearthstone.jpg&quot; data-state=&quot;bgdimmer&quot;}</span></code></pre></div>
-<p>Note, require <code>.bgdimmer</code> in custom.scss</p>
-</section>
-
-<section id="custom-style-background-2" class="title-slide slide level2" data-background-image="./assets/hearthstone.jpg" data-state="bgdimmest">
-<h2 data-background-image="./assets/hearthstone.jpg" data-state="bgdimmest">Custom style Background</h2>
-<p>custom style by adding <code>data-state="bgdimmest"</code></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Custom style Background {background-image=&quot;./assets/hearthstone.jpg&quot; data-state=&quot;bgdimmest&quot;}</span></code></pre></div>
-<p>Note, require <code>.bgdimmest</code> in custom.scss</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>Custom style Background {background-image=&quot;./assets/hearthstone.jpg&quot; data-state=&quot;bgdimmer&quot;}</span></code></pre></div>
+<p><span class="smallest">see or edit <strong>./custom.scss</strong> for your own custom style</span></p>
 </section>
 
 <section id="local-video" class="title-slide slide level2">
@@ -233,7 +239,7 @@
 
 <section id="local-video-1" class="title-slide slide level2">
 <h2>Local Video</h2>
-<p>using <code>&lt;iframe&gt;</code></p>
+<p>using <code>&lt;iframe&gt;</code>, for better layout</p>
 <iframe width="560" height="315" src="assets/video.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 </section>
@@ -247,21 +253,35 @@
 <section id="background-video" class="title-slide slide level2" data-background-video="./assets/video.mp4">
 <h2 data-background-video="./assets/video.mp4">Background Video</h2>
 <p>add background vide by</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>Background Video {data-background-video=&quot;./assets/video.mp4&quot;}</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Background Video {data-background-video=&quot;./assets/video.mp4&quot;}</span></code></pre></div>
 </section>
 
-<section id="custom-style-background-video" class="title-slide slide level2" data-background-video="./assets/video.mp4" data-state="bgdimmest">
-<h2 data-background-video="./assets/video.mp4" data-state="bgdimmest">Custom style Background Video</h2>
+<section id="custom-style-background-video" class="title-slide slide level2" data-background-video="./assets/video.mp4" data-state="bgdimmer">
+<h2 data-background-video="./assets/video.mp4" data-state="bgdimmer">Custom style Background Video</h2>
 <p>add background vide by</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Background Video {data-background-video=&quot;./assets/video.mp4&quot; data-state=&quot;bgdimmest&quot;}</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Background Video {data-background-video=&quot;./assets/video.mp4&quot; data-state=&quot;bgdimmer&quot;}</span></code></pre></div>
+</section>
+
+<section id="embed" class="title-slide slide level2">
+<h2>Embed</h2>
+<p>Embed anohter page, e.g., a complex interactive page by</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;embed</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;text/html&quot;</span> <span class="er">src</span><span class="ot">=</span><span class="st">assets/plot.html</span> <span class="er">width</span><span class="ot">=</span><span class="st">&quot;800&quot;</span> <span class="er">height</span><span class="ot">=</span><span class="st">&quot;400&quot;</span><span class="kw">&gt;</span></span></code></pre></div>
+<embed type="text/html" src=assets/plot.html width="800" height="400">
+<ul>
+<li>touch the embeded frame to interact with it,</li>
+<li>touch anywhere else to get focus back to revealjs.</li>
+</ul>
+<div class="smallest">
+<p>see also <a href="https://github.com/pyecharts/pyecharts/blob/master/README.en.md">pyecharts</a> for how to generate this plot page</p>
+</div>
 </section>
 
 <section id="internal-links" class="title-slide slide level2">
 <h2>Internal links</h2>
-<p>See the <a href="#/YoutubePageId">Previous topic</a>.</p>
+<p>See the <a href="#/EndingAlistId">Next topic</a>.</p>
 </section>
 
-<section id="ending-a-list" class="title-slide slide level2">
+<section id="EndingAlistId" class="title-slide slide level2">
 <h2>Ending a list</h2>
 <ol type="1">
 <li>one</li>
@@ -423,35 +443,21 @@ checked item</li>
 
 <section id="codes" class="title-slide slide level2">
 <h2>Codes</h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">int</span> argc<span class="op">,</span> <span class="dt">char</span><span class="op">**</span> argv<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>cout<span class="op"> &lt;&lt;</span> <span class="st">&quot;I&#39;m c++!&quot;</span><span class="op">;</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;I&#39;m Python!&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">int</span> argc<span class="op">,</span> <span class="dt">char</span><span class="op">**</span> argv<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>cout<span class="op"> &lt;&lt;</span> <span class="st">&quot;I&#39;m c++!&quot;</span><span class="op">;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;I&#39;m Python!&quot;</span>)</span></code></pre></div>
 </section>
 
-<section id="styles" class="title-slide slide level2">
-<h2>Styles</h2>
-<p>You can customize styles in <em>custom.css</em></p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>style<span class="op">&gt;</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="op">.</span><span class="at">smaller</span> { font<span class="op">-</span><span class="dt">size</span><span class="op">:</span> <span class="dv">80</span><span class="op">%</span> }</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="op">.</span><span class="at">smallest</span> { font<span class="op">-</span><span class="dt">size</span><span class="op">:</span> <span class="dv">50</span><span class="op">%</span> }</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>style<span class="op">&gt;</span></span></code></pre></div>
-<div class="smaller">
-<p>and make content smaller by:</p>
-</div>
-<pre><code>[make single line smaller]{.smaller}
-
-&lt;div class=&quot;smaller&quot;&gt;
-whole block inside a page section
-&lt;/div&gt;</code></pre>
-<p><span class="smallest">or smallest by:</span></p>
-<pre><code>[make single line smallest]{.smallest}
-
-&lt;div class=&quot;smallest&quot;&gt;
-whole block inside a page section
-&lt;/div&gt;</code></pre>
+<section id="header-or-footer-logo" class="title-slide slide level2">
+<h2>Header or Footer logo</h2>
+<p>Notice the pandoc and revealjs logo in the corner? Add it in the YAML metadata block (the start of this markdown)</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">include-before</span><span class="kw">:</span><span class="at"> &lt;div class=&quot;floatTR&quot;&gt;&lt;img src=&quot;assets/pandoc.png&quot; height=&quot;32&quot;/&gt;&lt;img src=&quot;assets/revealjs.png&quot; height=&quot;32&quot;/&gt;&lt;/div&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
+<p>See the <a href="#/CustomBuildSettingsId">Custom Build Settings</a> page for more detail.</p>
 </section>
 </section>
 <section>
@@ -474,13 +480,13 @@ choco install pandoc</code></pre>
 <li>run <strong>./build_presentation</strong> script,</li>
 <li>or execute in commandline:</li>
 </ul>
-<div class="sourceCode" id="cb14"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> README.md <span class="at">-t</span> revealjs <span class="at">-s</span> <span class="at">--css</span><span class="op">=</span>custom.css <span class="at">--mathjax</span> <span class="at">--template</span><span class="op">=</span>pandoc-templates/default.revealjs <span class="at">-V</span> revealjs-url=reveal.js <span class="at">--slide-level</span> 3  <span class="at">-V</span> slideNumber=true  <span class="at">-V</span> transition=slide <span class="at">-V</span> backgroundTransition=none <span class="at">-o</span> README.html</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> README.md <span class="at">-t</span> revealjs <span class="at">-s</span> <span class="at">--css</span><span class="op">=</span>custom.css <span class="at">--mathjax</span> <span class="at">--template</span><span class="op">=</span>pandoc-templates/default.revealjs <span class="at">-V</span> revealjs-url=reveal.js <span class="at">--slide-level</span> 3 <span class="at">-o</span> README.html</span></code></pre></div>
 </section>
 
 <section id="custom-style" class="title-slide slide level2">
 <h2>Custom style</h2>
 <p>this template uses <strong>custom.css</strong> for custom style.</p>
-<p><a href="https://sass-lang.com/install">sass</a> is required if you want to rebuild <strong>custom.scss</strong> into <strong>custom .css</strong></p>
+<p>If you want to edit and rebuild <strong>custom.scss</strong> into <strong>custom .css</strong>, <a href="https://sass-lang.com/install">sass</a> is required.</p>
 <ul>
 <li>install scss first</li>
 </ul>
@@ -493,6 +499,20 @@ choco install sass</code></pre>
 </ul>
 <div class="sourceCode" id="cb17"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sass</span> ./custom.scss ./custom.css</span></code></pre></div>
 <p>run <strong>./build</strong> script to build both css and presentation.</p>
+</section>
+
+<section id="CustomBuildSettingsId" class="title-slide slide level2">
+<h2>Custom build settings</h2>
+<p>adjust custom build settings in YAML metadata block (the start of this markdown)</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">numbersections</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">history</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">slideNumber</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="fu">transition</span><span class="kw">:</span><span class="at"> slide</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="fu">backgroundTransition</span><span class="kw">:</span><span class="at"> none</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
+<p>or in the command line script:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> README.md ... <span class="at">-V</span> revealjs-url=reveal.js ... <span class="at">-o</span> README.html</span></code></pre></div>
 </section>
 </section>
 <section>
@@ -527,7 +547,10 @@ choco install sass</code></pre>
 
 <section id="references" class="title-slide slide level1">
 <h1>References</h1>
-<p><a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Pandoc’s Markdown</a></p>
+<ol type="1">
+<li><a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Pandoc’s Markdown</a></li>
+<li><a href="https://revealjs.com/auto-animate/">Revealjs Home</a></li>
+</ol>
 </section>
     </div>
   </div>
@@ -579,7 +602,7 @@ choco install sass</code></pre>
         respondToHashChanges: true,
 
         // Push each slide change to the browser history
-        history: false,
+        history: true,
 
         // Enable keyboard shortcuts for navigation
         keyboard: true,

@@ -1,33 +1,26 @@
 ---
-title: "Template Title"
+title: "Your Title"
 author: Your Name
-fontsize: 12pt
-mainfont: Arial
-monofont: Courier New
-# macos
-#CJKmainfont: PingFang SC
-# windows
-CJKmainfont: 黑体
+
+title-slide-attributes:
+	data-background-image: ./assets/hearthstone.jpg
+    data-background-size: cover
+	data-background-opacity: 0.3
+
+include-before: <div class="floatTR"><img src="assets/pandoc.png" height="32"/><img src="assets/revealjs.png" height="32"/></div>
+
 numbersections: true
+history: true
+slideNumber: true
+transition: slide
+backgroundTransition: none
 ---
 
 
 
-# Template Title
+## Quick guide
 
-Your Name
-
-Your Date
-
-
-::: {.columns}
-
-::: {.column width="80%"}
-:::
-
-::: {.column width="20%"}
-
-<div class="smaller">
+<div class="smallest">
 
 - `Space`: next page，
 - `Arrow`: navigation，
@@ -38,13 +31,10 @@ Your Date
 
 </div>
 
-:::
-:::
-
-
 ## What is it
 
 ::: incremental
+
 
 - It converts **Markdown**...
 - into a **Presentation**!
@@ -58,11 +48,15 @@ The presentation is just a web page:  [README.html](https://donaldwuid.github.io
 
 ## How it works
 
-Use **pandoc** to convert **markdown** to presentation as **html+reveal.js**.
 
+it uses **pandoc** to convert **markdown** to presentation as **html+reveal.js**.
+
+- `pandoc(markdown) -> html`
 - [pandoc](http://pandoc.org): a markdown(, etc.) document converter
 - [reveal.js](http://lab.hakim.se/reveal-js/#/): a HTML presentation framework.
 
+![](./assets/pandoc.png){height=64}
+![](./assets/revealjs.png){height=64}
 
 # Features
 
@@ -99,7 +93,45 @@ Former title is Continued in a new slide
 - [Custom style: dim]{.dim}
 - [Custom style: invert]{.invert}
 
-see or edit **custom.scss** for your own custom style
+
+[see or edit **./custom.scss** for your own custom style]{.smallest}
+
+## General Custom Styles
+
+
+```js
+<style>
+.smaller { font-size: 80% }
+.smallest { font-size: 50% }
+</style>
+
+```
+
+<div class="smaller">
+and make content smaller by: 
+</div>
+
+```
+[make single line smaller]{.smaller}
+
+<div class="smaller">
+whole block inside a page section
+</div>
+```
+
+[or smallest by: ]{.smallest}
+
+```
+[make single line smallest]{.smallest}
+
+<div class="smallest">
+whole block inside a page section
+</div>
+```
+
+
+[see or edit **./custom.scss** for your own custom style]{.smallest}
+
 
 ## Notes
 
@@ -126,17 +158,6 @@ Background Image {background-image="./assets/hearthstone.jpg"}
 ```
 
 
-## Custom style Background {background-image="./assets/hearthstone.jpg" data-state="bgdim"}
-
-custom style by adding `data-state="bgdim"`
-
-```md
-Custom style Background {background-image="./assets/hearthstone.jpg" data-state="bgdim"}
-```
-
-Note, require `.bgdim` in custom.scss
-
-
 ## Custom style Background {background-image="./assets/hearthstone.jpg" data-state="bgdimmer"}
 
 custom style by adding `data-state="bgdimmer"`
@@ -145,19 +166,11 @@ custom style by adding `data-state="bgdimmer"`
 Custom style Background {background-image="./assets/hearthstone.jpg" data-state="bgdimmer"}
 ```
 
-Note, require `.bgdimmer` in custom.scss
 
-## Custom style Background {background-image="./assets/hearthstone.jpg" data-state="bgdimmest"}
-
-custom style by adding `data-state="bgdimmest"`
-
-```md
-Custom style Background {background-image="./assets/hearthstone.jpg" data-state="bgdimmest"}
-```
-
-Note, require `.bgdimmest` in custom.scss
+[see or edit **./custom.scss** for your own custom style]{.smallest}
 
 ## Local Video
+
 
 using `<video>`
 
@@ -165,11 +178,13 @@ using `<video>`
     <source src="assets/video.mp4" type="video/mp4">
 </video>
 
+
 ## Local Video
 
-using `<iframe>`
+using `<iframe>`, for better layout
 
 <iframe width="560" height="315" src="assets/video.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ## Youtube Video {#YoutubePageId}
 
@@ -186,19 +201,43 @@ Background Video {data-background-video="./assets/video.mp4"}
 ```
 
 
-## Custom style Background Video {data-background-video="./assets/video.mp4" data-state="bgdimmest"}
+## Custom style Background Video {data-background-video="./assets/video.mp4" data-state="bgdimmer"}
 
 add background vide by 
 
 ```md
-Background Video {data-background-video="./assets/video.mp4" data-state="bgdimmest"}
+Background Video {data-background-video="./assets/video.mp4" data-state="bgdimmer"}
 ```
+
+
+## Embed
+
+Embed anohter page, e.g., a complex interactive page by 
+
+```html
+<embed type="text/html" src=assets/plot.html width="800" height="400">
+```
+
+
+<embed type="text/html" src=assets/plot.html width="800" height="400">
+
+- touch the embeded frame to interact with it,
+- touch anywhere else to get focus back to revealjs.
+
+<div class="smallest">
+
+see also [pyecharts](https://github.com/pyecharts/pyecharts/blob/master/README.en.md) for how to generate this plot page
+
+</div>
+
+
+
 
 ## Internal links
 
-See the [Previous topic](#YoutubePageId).
+See the [Next topic](#EndingAlistId).
 
-## Ending a list
+## Ending a list {#EndingAlistId}
 
 1.  one
 2.  two
@@ -346,39 +385,21 @@ print("I'm Python!")
 ```
 
 
-## Styles
+## Header or Footer logo
 
-You can customize styles in *custom.css*
+Notice the pandoc and revealjs logo in the corner? Add it in the YAML metadata block (the start of this markdown)
 
-```js
-<style>
-.smaller { font-size: 80% }
-.smallest { font-size: 50% }
-</style>
 
+
+```yaml
+---
+include-before: <div class="floatTR"><img src="assets/pandoc.png" height="32"/><img src="assets/revealjs.png" height="32"/></div>
+---
 ```
 
-<div class="smaller">
-and make content smaller by: 
-</div>
+See the [Custom Build Settings](#CustomBuildSettingsId) page for more detail.
 
-```
-[make single line smaller]{.smaller}
 
-<div class="smaller">
-whole block inside a page section
-</div>
-```
-
-[or smallest by: ]{.smallest}
-
-```
-[make single line smallest]{.smallest}
-
-<div class="smallest">
-whole block inside a page section
-</div>
-```
 
 # How to build
 
@@ -402,14 +423,14 @@ choco install pandoc
 
 
 ```sh
-pandoc README.md -t revealjs -s --css=custom.css --mathjax --template=pandoc-templates/default.revealjs -V revealjs-url=reveal.js --slide-level 3  -V slideNumber=true  -V transition=slide -V backgroundTransition=none -o README.html
+pandoc README.md -t revealjs -s --css=custom.css --mathjax --template=pandoc-templates/default.revealjs -V revealjs-url=reveal.js --slide-level 3 -o README.html
 ```
 
 ## Custom style
 
 this template uses **custom.css** for custom style. 
 
-[sass](https://sass-lang.com/install) is required if you want to rebuild **custom.scss** into **custom .css**
+If you want to edit and rebuild **custom.scss** into **custom .css**, [sass](https://sass-lang.com/install) is required.
 
 - install scss first
 ```sh
@@ -426,6 +447,28 @@ sass ./custom.scss ./custom.css
 ```
 
 run **./build** script to build both css and presentation.
+
+
+## Custom build settings  {#CustomBuildSettingsId}
+
+adjust custom build settings in YAML metadata block (the start of this markdown)
+
+```yaml
+---
+numbersections: true
+history: true
+slideNumber: true
+transition: slide
+backgroundTransition: none
+---
+```
+
+or in the command line script:
+
+```sh
+pandoc README.md ... -V revealjs-url=reveal.js ... -o README.html
+```
+
 
 
 
@@ -451,4 +494,5 @@ Pandoc uses LaTeX to convert your markdown to PDF,
 
 # References
 
-[Pandoc’s Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown)
+1. [Pandoc’s Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown)
+1. [Revealjs Home](https://revealjs.com/auto-animate/)
