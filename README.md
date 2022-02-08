@@ -72,7 +72,7 @@ To be continued...
 
 ---
 
-Former title is Continued in a new slide
+Former title is Continued in this new slide by `---`
 
 
 
@@ -83,8 +83,8 @@ Former title is Continued in a new slide
 - ~~deleted text~~
 - H~2~O is a liquid.  2^10^ is 1024
 - P~a\ cat~
+- `Verbatim`
 - *\*escape\**
-- `*Verbatim*`
 
 
 ## Text Custom Styles
@@ -190,7 +190,7 @@ using `<iframe>`, for better layout
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vPguoeYTvMI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
+Note: not all youtube video can be embeded, it depends on the uploader's setting.
 
 ## Background Video {data-background-video="./assets/video.mp4"}
 
@@ -215,11 +215,11 @@ Background Video {data-background-video="./assets/video.mp4" data-state="bgdimme
 Embed anohter page, e.g., a complex interactive page by 
 
 ```html
-<embed type="text/html" src=assets/plot.html width="800" height="400">
+<iframe src=assets/plot.html width="800" height="450"></iframe>
 ```
 
 
-<embed type="text/html" src=assets/plot.html width="800" height="400">
+<iframe src=assets/plot.html width="800" height="450"></iframe>
 
 - touch the embeded frame to interact with it,
 - touch anywhere else to get focus back to revealjs.
