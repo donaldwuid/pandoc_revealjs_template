@@ -55,8 +55,8 @@ it uses **pandoc** to convert **markdown** to presentation as **html+reveal.js**
 - [pandoc](http://pandoc.org): a markdown(, etc.) document converter
 - [reveal.js](http://lab.hakim.se/reveal-js/#/): a HTML presentation framework.
 
-![](./assets/pandoc.png){height=64}
-![](./assets/revealjs.png){height=64}
+![](./assets/pandoc.png)
+![](./assets/revealjs.png)
 
 # Features
 

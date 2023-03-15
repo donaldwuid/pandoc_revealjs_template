@@ -362,6 +362,30 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   font-size: 120%;
 }
 
+.reveal {
+  font-size: 120%;
+}
+
+a:link {
+  text-decoration: underline;
+}
+
+a:visited {
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+img {
+  width: 40%;
+}
+
 strong {
   color: #0000f1;
 }
